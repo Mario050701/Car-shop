@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 120px;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+img.cart {
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+img.cart:hover {
+  transform: scale(1.1);
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu img {
+  width: 30px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 10px;
+  }
+
+  ul {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+    flex-basis: 100%;
+    order: 3;
+    transition: max-height 0.4s ease;
+    opacity: 0;
+  }
+
+  .burger-menu {
+    display: block;
+    margin-left: auto;
+    order: 1;
+  }
+
+  img.cart {
+    width: 30px;
+    height: auto;
+    order: 2;
+  }
+
+  ul.active {
+    opacity: 1;
+    max-height: 500px;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  ul.active {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.4s ease forwards;
+  }
+
+  ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  ul.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  ul.active li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  ul.active li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  ul.active li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  ul.active li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 60px;
+  }
+  ul {
+    gap: 20px;
+  }
+
+  img.cart {
+    width: 30px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
