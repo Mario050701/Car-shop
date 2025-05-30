@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,7 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-.container {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,8 +52,17 @@ img.cart:hover {
   width: 30px;
 }
 
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 60px;
+  }
+  ul {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 500px) {
-  .container {
+  nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -61,7 +72,6 @@ img.cart:hover {
 
   ul {
     max-height: 0;
-    overflow: hidden;
     flex-direction: column;
     overflow: hidden;
     width: 100%;
@@ -119,19 +129,6 @@ img.cart:hover {
   }
   ul.active li:nth-child(4) {
     animation-delay: 0.4s;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 20px 60px;
-  }
-  ul {
-    gap: 20px;
-  }
-
-  img.cart {
-    width: 30px;
   }
 }
 
