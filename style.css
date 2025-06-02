@@ -84,7 +84,7 @@ img.cart:hover {
 
   h1 {
     font-size: 3rem;
-    white-space: nowrap;
+    text-align: center;
     overflow: hidden;
   }
 
@@ -163,7 +163,6 @@ img.cart:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .hero-content {
