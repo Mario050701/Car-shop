@@ -3,8 +3,8 @@
 :root {
   --bg-hero-section: #e9f2ff;
 
-  --hero-section-btn-color: #405ff2;
-  --btn-contact-bg: #ffffff;
+  --btn-outline: #405ff2;
+  --btn-primary: #ffffff;
 }
 
 * {
@@ -15,6 +15,11 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-bottom: 72px;
 }
 
 nav {
@@ -73,8 +78,14 @@ img.cart:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
-    gap: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   ul {
@@ -105,13 +116,9 @@ img.cart:hover {
   ul.active {
     opacity: 1;
     max-height: 500px;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
-
-  ul.active {
-    opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(0);
     animation: slideIn 0.4s ease forwards;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
   }
 
   ul li {
@@ -153,7 +160,6 @@ img.cart:hover {
 
 .hero-section {
   background-color: var(--bg-hero-section);
-  font-family: "DM Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,21 +179,15 @@ img.cart:hover {
   margin-top: 115px;
 }
 
-.hero-content h1 {
-  font-size: 6rem;
-  margin-bottom: 72px;
-}
-
 .btn {
   border-radius: 12px;
-  background-color: var(--hero-section-btn-color);
+  background-color: var(--btn-outline);
   cursor: pointer;
   border: none;
   height: 60px;
   width: 180px;
   font-weight: 700;
   color: #e9f2ff;
-  font-size: 16px;
   font-family: inherit;
   margin-bottom: 30px;
 }
@@ -198,9 +198,9 @@ img.cart:hover {
 }
 
 .btn-contact {
-  background-color: var(--btn-contact-bg);
+  background-color: var(--btn-primary);
   color: var(--hero-section-btn-color);
-  outline: 1px solid var(--hero-section-btn-color);
+  outline: 1px solid var(--btn-outline);
 }
 
 .mobile-img {
@@ -212,27 +212,12 @@ img.cart:hover {
     padding: 0 20px;
   }
 
-  .hero-content h1 {
-    font-size: 2.8125rem;
-    margin-bottom: 36px;
-    white-space: nowrap;
-    text-align: center;
-  }
-
   .hero-content p {
     margin-top: 65px;
     text-align: center;
   }
 
-  .buttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
   .btn {
-    font-size: 1rem;
     width: 164px;
     height: 46px;
   }
@@ -245,10 +230,7 @@ img.cart:hover {
   .desktop-img {
     display: none;
   }
-
   .mobile-img {
     display: block;
-    max-width: 100%;
-    height: auto;
   }
 }
