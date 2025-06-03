@@ -9,7 +9,7 @@
   --features-bg-primary: #e9f2ff;
   --features-bg-secondary: #ffe9f3;
 
-  --btn-bg-secondary: #050b20;
+  --btn-secondary: #050b20;
 }
 
 * {
@@ -28,8 +28,7 @@ h1 {
 }
 
 h2 {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 2.5rem;
   margin-top: 150px;
   margin-bottom: 120px;
@@ -308,7 +307,7 @@ p {
 }
 
 .btn-features-two {
-  background-color: var(--btn-bg-secondary);
+  background-color: var(--btn-secondary);
 }
 
 .features-img {
@@ -328,6 +327,7 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 0;
   }
 
   .features-content {
