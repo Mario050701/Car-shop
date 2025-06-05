@@ -398,3 +398,196 @@ p {
     height: 130px;
   }
 }
+
+/* Top rated cars  */
+
+.car h4 {
+  font-size: 1.125rem;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+.car p {
+  font-size: 0.875rem;
+}
+
+.top-rated-cars {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 200px;
+}
+
+.car {
+  background-color: var(--bg-hero-section);
+  border-radius: 16px;
+  position: relative;
+}
+
+.bookmark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.car-img {
+  width: 368px;
+  height: 218px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.car-data {
+  margin: 0 30px;
+  margin-top: 8px;
+}
+
+.car-line {
+  margin: 15px 30px;
+  border: 1px solid var(--btn-secondary);
+}
+
+.car-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.car-price h3 {
+  font-size: 1.25rem;
+}
+
+.car-info-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+  text-align: center;
+  gap: 75px;
+}
+
+.car-info-group .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.car-info-group .info img {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.car-info-group .info p {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.car-price button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 9px;
+  cursor: pointer;
+  color: var(--btn-secondary);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.shop-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 53px;
+}
+
+.shop-now button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-outline);
+  border: none;
+  color: var(--btn-primary);
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 12px;
+  width: 159px;
+  height: 60px;
+  letter-spacing: 1px;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.shop-now img {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 1024px) {
+  .top-rated-cars {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .car {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .car-img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .car-price {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .car-price button {
+    width: auto;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .top-rated-cars {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .car-line {
+    margin: 15px 20px;
+  }
+
+  .car h4,
+  .car-data {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .car-price {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .shop-now button {
+    margin-bottom: 40px;
+  }
+}
