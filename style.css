@@ -403,7 +403,7 @@ p {
 
 .car h4 {
   font-size: 1.125rem;
-  margin-left: 30px;
+  margin: 0 30px;
   font-weight: 500;
 }
 
@@ -419,12 +419,18 @@ p {
   gap: 20px;
 }
 
+.top-rated-cars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
 .car {
   background-color: var(--bg-hero-section);
   border-radius: 16px;
   position: relative;
-  max-width: auto;
-  width: 100%;
+  width: 328px;
   margin-bottom: 30px;
 }
 
@@ -462,10 +468,12 @@ p {
 
 .car-price h3 {
   font-size: 1.25rem;
+  margin-bottom: 30px;
 }
 
 .btn-details {
   background-color: transparent;
+  margin-bottom: 30px;
 }
 
 .car-info-group {
@@ -473,7 +481,7 @@ p {
   justify-content: space-between;
   margin: 20px 30px;
   text-align: center;
-  gap: 75px;
+  gap: 50px;
 }
 
 .car-info-group .info {
@@ -551,7 +559,6 @@ p {
 
   .car {
     width: 100%;
-    max-width: 360px;
     margin-bottom: 30px;
     overflow: hidden;
   }
@@ -588,10 +595,6 @@ p {
     justify-content: center;
     padding: 0 20px;
     gap: 30px;
-  }
-
-  .car {
-    width: 90%;
   }
 
   .car-line {
