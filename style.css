@@ -555,19 +555,13 @@ p {
     margin: 0 auto;
   }
 
-  .car h4,
-  .car span {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   .btn {
     margin-top: 40px;
   }
 
   .bookmark {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
   }
 }
