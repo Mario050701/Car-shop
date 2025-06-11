@@ -10,6 +10,8 @@
   --features-bg-secondary: #ffe9f3;
 
   --btn-secondary: #050b20;
+
+  --input-outline: #e9e9e9;
 }
 
 * {
@@ -662,5 +664,93 @@ h5 {
 
   .content-info img {
     margin: 0 auto 18px;
+  }
+}
+
+/* footer */
+
+.footer-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  gap: 20px;
+}
+
+.footer-signup h3 {
+  font-weight: 500;
+  font-size: 1.875rem;
+}
+
+.footer-signup p {
+  font-size: 0.8375rem;
+}
+
+.email-subscribe {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-input {
+  width: 100%;
+  padding: 20px 120px 20px 20px;
+  text-align: left;
+  border-radius: 12px;
+  border: 1px solid var(--input-outline);
+}
+
+.btn-sign-up {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 50px;
+  background-color: var(--btn-outline);
+  color: var(--btn-primary);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 34px;
+  width: 100%;
+  padding: 0 260px;
+}
+
+.footer-span {
+  flex: 1;
+  color: var(--btn-secondary);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.footer-span:last-child {
+  text-align: right;
+}
+
+@media (max-width: 500px) {
+  .footer-links {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 20px 0;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-links {
+    padding: 0 40px;
+    margin: 20px;
   }
 }
