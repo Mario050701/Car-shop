@@ -22,6 +22,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -670,6 +671,7 @@ h5 {
 /* footer */
 
 .footer-signup {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -753,4 +755,31 @@ h5 {
     padding: 0 40px;
     margin: 20px;
   }
+}
+
+.scrollToTopBtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-outline);
+  right: 110px;
+  bottom: 260px;
+  background-color: var(--btn-outline);
+  color: var(--btn-primary);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scrollToTopBtn:hover {
+  transform: scale(1.1);
+}
+
+.scrollToTopBtn img {
+  width: 13px;
+  height: 13px;
 }
