@@ -573,13 +573,15 @@ p {
 
 .why-choose-us {
   background-color: var(--bg-hero-section);
+  /* join marings */
   margin: 0 120px;
+  margin-top: 150px;
   border-radius: 16px;
   padding: 115px 0;
-  margin-top: 150px;
 }
 
 .why-choose-us h3 {
+  /* should've used text-align: center; */
   display: flex;
   justify-content: center;
   font-size: 2.5rem;
@@ -607,6 +609,7 @@ p {
 }
 
 .content-info p {
+  /* REMOVE */
   margin-top: 0;
 }
 
@@ -617,6 +620,7 @@ h5 {
 .content p {
   font-size: 0.9375rem;
   font-weight: 400;
+  /* REMOVE - default font weight is already 400 */
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -652,6 +656,10 @@ h5 {
     flex-direction: column;
     padding: 0 30px;
     gap: 40px;
+  }
+
+  .why-choose-us {
+    margin: 0;
   }
 
   .why-choose-us h3 {
