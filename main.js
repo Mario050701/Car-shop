@@ -14,13 +14,13 @@ scrollToTopElement.addEventListener("click", () => {
   });
 });
 
-let extensionsData = [];
+let carsData = [];
 
 async function fetchData() {
   try {
     const response = await fetch("https://cars-api-rjtn.onrender.com/api/cars");
     const data = await response.json();
-    extensionsData = data;
+    carsData = data;
 
     renderCars(data);
   } catch (error) {

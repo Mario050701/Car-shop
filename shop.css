@@ -1,5 +1,8 @@
+@import url("style.css");
+
 .explore-offer h1 {
   text-align: center;
+  padding: 100px 0 100px 0;
 }
 
 .car-list {
@@ -110,28 +113,5 @@
 @media (max-width: 500px) {
   .car-list {
     grid-template-columns: 1fr;
-  }
-
-  .why-choose-us-content {
-    flex-direction: column;
-    padding: 0 30px;
-    gap: 40px;
-  }
-
-  .why-choose-us {
-    margin: 0;
-  }
-
-  .why-choose-us h3 {
-    font-size: 1.5rem;
-  }
-
-  .content-info {
-    align-items: center;
-    text-align: center;
-  }
-
-  .content-info img {
-    margin: 0 auto 18px;
   }
 }
