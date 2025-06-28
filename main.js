@@ -3,6 +3,8 @@ const burgerMenuElement = document.querySelector("#burger-menu");
 const navLinksElement = document.querySelector("#nav-links");
 const scrollToTopElement = document.querySelector("#scrollToTopBtn");
 
+const carContainerElement = document.querySelector(".single-car-container");
+
 burgerMenuElement.addEventListener("click", () => {
   navLinksElement.classList.toggle("active");
 });
@@ -64,7 +66,7 @@ function renderCars(cars) {
 
     <div class="car-price">
       <p>$${car.price}</p>
-      <button class="btn-details">
+      <button class="btn-details"  data-id="${car._id}" >
         View details
         <img src="assets/blackArrow.png" alt="arrow" />
       </button>
@@ -73,6 +75,12 @@ function renderCars(cars) {
 `;
 
     carList.appendChild(carCard);
+
+    const viewDetailsBtnElement = carCard.querySelector(".btn-details");
+    viewDetailsBtnElement.addEventListener("click", () => {
+      const carId = viewDetailsBtnElement.getAttribute("data-id");
+      window.location.href = `carPage.html?id=${carId}`;
+    });
   });
 }
 

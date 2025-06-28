@@ -567,7 +567,6 @@ p {
 }
 
 .why-choose-us h3 {
-  /* should've used text-align: center; */
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
