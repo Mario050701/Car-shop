@@ -4,34 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="variables.css" />
-    <link rel="stylesheet" href="carPage.css" />
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/shop.css" />
   </head>
   <body>
     <nav>
-      <img src="./assets/Logo.png" alt="Logo" />
+      <img src="../assets/Logo.png" alt="Logo" />
       <div class="burger-menu" id="burger-menu">
-        <img src="./assets/burgerMenu.png" alt="burger-menu" />
+        <img src="../assets/burgerMenu.png" alt="burger-menu" />
       </div>
       <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <img src="assets/shoppingCart.png" alt="Shopping cart" class="cart" />
+      <img src="../assets/shoppingCart.png" alt="Shopping cart" class="cart" />
     </nav>
     <hr />
-     
-    <section>
-      <h1>Car info</h1>
 
-      <div class="single-car">
-        <button class="go-back-btn" id="goBackBtn">Go back</button>
-        <div class="single-car-container"></div>
-      </div>
+    <section class="explore-offer">
+      <h1>Explore our offer</h1>
     </section>
+    <section class="car-list" id="car-list"></section>
 
     <section>
       <div class="why-choose-us">
@@ -76,6 +73,9 @@
 
     <footer>
       <div class="footer-signup">
+        <button class="scrollToTopBtn" id="scrollToTopBtn" title="Back to top">
+          <img src="assets/arrowTop.png" alt="" />
+        </button>
         <h3>Join CarShop</h3>
         <p>Receive pricing updates, shopping tips & more!</p>
         <div class="email-subscribe">
@@ -99,7 +99,6 @@
         </span>
       </div>
     </footer>
-
-    <script src="carPage.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>

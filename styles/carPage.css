@@ -2,8 +2,9 @@
 @import url("style.css");
 
 h1 {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
   margin-top: 90px;
 }
 
