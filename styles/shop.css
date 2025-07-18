@@ -1,4 +1,5 @@
 @import url("style.css");
+@import url("variables.css");
 
 .explore-offer h1 {
   text-align: center;
@@ -113,5 +114,24 @@
 @media (max-width: 500px) {
   .car-list {
     grid-template-columns: 1fr;
+  }
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  margin: 100px auto;
+  border: 8px solid blue;
+  border-top: 8px solid whitesmoke;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
