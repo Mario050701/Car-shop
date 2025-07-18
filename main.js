@@ -5,6 +5,8 @@ const scrollToTopElement = document.querySelector("#scrollToTopBtn");
 
 const carContainerElement = document.querySelector(".single-car-container");
 
+const loaderElement = document.querySelector("#loader");
+
 burgerMenuElement.addEventListener("click", () => {
   navLinksElement.classList.toggle("active");
 });
@@ -19,16 +21,29 @@ scrollToTopElement.addEventListener("click", () => {
 let carsData = [];
 
 async function fetchData() {
+  const loader = document.getElementById("loader");
+  const carList = document.getElementById("car-list");
+
+  loader.style.display = "block";
+  carList.style.display = "none";
+
   try {
     const response = await fetch("https://cars-api-rjtn.onrender.com/api/cars");
     const data = await response.json();
     carsData = data;
 
     renderCars(data);
+
+    loader.style.display = "none";
+    carList.style.display = "grid";
   } catch (error) {
     console.error(error);
+    loader.style.display = "none";
+    carList.style.display = "block";
+    carList.innerHTML = "<p>Failed to load data.</p>";
   }
 }
+
 function renderCars(cars) {
   const carList = document.querySelector("#car-list");
   carList.innerHTML = "";
@@ -40,7 +55,7 @@ function renderCars(cars) {
     carCard.innerHTML = `
   <div class="car-img">
     <img src="${car.image}" alt="${car.model}" />
-     <img class="bookmark" src="assets/bookmark.png" alt="bookmark" />
+     <img class="bookmark" src="../assets/bookmark.png" alt="bookmark" />
   </div>
  
   <div class="card-content">
@@ -49,15 +64,15 @@ function renderCars(cars) {
     <hr class="line" />
     <div class="car-info">
       <div class="car-info-group">
-        <img src="assets/milesLogo.png" alt="Miles" />
+        <img src="../assets/milesLogo.png" alt="Miles" />
         <p>${car.color || "50"} Miles</p>
       </div>
       <div class="car-info-group">
-        <img src="assets/petrol.png" alt="Fuel" />
+        <img src="../assets/petrol.png" alt="Fuel" />
         <p>${car.fuelType || "Diesel"}</p>
       </div>
       <div class="car-info-group">
-        <img src="assets/gearbox.png" alt="Gearbox" />
+        <img src="../assets/gearbox.png" alt="Gearbox" />
         <p>Manual</p>
       </div>
     </div>
@@ -68,7 +83,7 @@ function renderCars(cars) {
       <p>$${car.price}</p>
       <button class="btn-details"  data-id="${car._id}" >
         View details
-        <img src="assets/blackArrow.png" alt="arrow" />
+        <img src="../assets/blackArrow.png" alt="arrow" />
       </button>
     </div>
   </div>

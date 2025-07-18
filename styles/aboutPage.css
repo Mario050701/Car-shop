@@ -1,0 +1,12 @@
+@import url(style.css);
+
+h1 {
+  text-align: center;
+  padding: 90px 0;
+}
+
+@media (max-width: 500px) {
+  .aboutPageCar {
+    width: 100%;
+  }
+}
