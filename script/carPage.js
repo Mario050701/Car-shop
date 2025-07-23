@@ -86,3 +86,9 @@ function renderCarDetails(car) {
     alert("The car has been added to your cart!");
   });
 }
+
+const cartElement = document.querySelector("#cart");
+
+cartElement.addEventListener("click", () => {
+  window.location.href = "cartPage.html";
+});
